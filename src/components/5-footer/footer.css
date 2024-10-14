@@ -1,0 +1,66 @@
+/*=========================================
+        Table of Content
+===========================================
+*/
+
+/*
+        1-footer section
+        2-left side 
+        3-right side (animation)
+        4-resposive (media query)
+*/
+
+
+/*=========================================
+        1-footer section
+===========================================
+*/
+
+footer{
+    width: 95%;
+    justify-content: space-between;
+    margin: -0.5rem auto 2rem;
+}
+/*=========================================
+        2-left side
+===========================================
+*/
+footer ul.left-side{
+    gap: 1rem;
+}
+footer ul.left-side li a{
+    color: var(--sub-title);
+    transition: 0.3s;
+    font-size: 1.03rem;
+    font-weight: bold;   
+}
+footer ul.left-side li:hover a{
+    color: var(--blue-color);
+    font-size: 1.05rem;
+}
+/*=========================================
+        2-right side
+===========================================
+*/
+footer p.right-side{
+    color: rgb(113, 113, 122);
+}
+
+/*=========================================
+        4-resposive (media query)
+===========================================
+*/
+@media (max-width:400px) {
+    footer ul.left-side{
+        flex-direction: column;
+    }
+}
+@media (max-width:750px) {
+    footer{
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+
+

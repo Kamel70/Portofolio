@@ -1,0 +1,171 @@
+/*=========================================
+        Table of Content
+===========================================
+*/
+
+/*
+        1-main
+        2-left side
+        3-right side
+        4-resposive(media query)
+*/
+
+/*=========================================
+        1-main
+===========================================
+*/
+main.flex {
+  gap: 3rem;
+  align-items: start;
+}
+/*=========================================
+        2-left side
+===========================================
+*/
+main.flex section.left-section.flex {
+  flex-direction: column;
+  gap: 0.7rem;
+}
+main.flex section.left-section.flex button {
+  padding: 1rem 0.7rem;
+  background-color: rgba(36, 37, 46, 1);
+  width: 11rem;
+  /* height: 2rem; */
+  text-align: center;
+  border-radius: 6px;
+  text-transform: capitalize;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+main.flex section.left-section.flex button:hover {
+  opacity: 1;
+}
+main.flex section.left-section.flex button.active {
+  opacity: 1;
+  border: 1px solid var(--blue-color);
+  letter-spacing: 1px;
+  font-weight: bold;
+  padding: 0.7rem;
+}
+
+/*=========================================
+        3-right side
+===========================================
+*/
+main.flex section.right-section {
+  flex-grow: 1;
+  row-gap: 30px;
+  column-gap: 15px;
+  flex-wrap: wrap;
+  transition: 0.4s;
+  justify-content: center;
+}
+main.flex section.right-section article.card {
+  border: 1px solid rgba(68, 187, 241, 0.548);
+  opacity: 0.8;
+  transition: 0.3s;
+  border-radius: 5px;
+  /* background-image: linear-gradient(
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.05)
+  ); */
+  box-shadow: 1px 1px 8px black;
+  background-color: rgb(36, 36, 39);
+}
+main.flex section.right-section article.card:hover {
+  /* border: 1px solid var(--blue-color); */
+  scale: 1.05;
+  opacity: 1;
+  rotate: 1deg;
+  cursor: pointer;
+}
+main.flex section.right-section article.card img {
+  width: 266px;
+  border-radius: 5px 5px 0 0;
+}
+main.flex section.right-section article.card .description {
+  width: 266px;
+  padding: 0.8rem 0.6rem;
+}
+
+main.flex section.right-section article.card .description h2.title {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+main.flex section.right-section article.card .description p.sub-title {
+  color: var(--sub-title);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+main.flex section.right-section article.card .description .links {
+  justify-content: space-between;
+  font-size: 1.3rem;
+}
+main.flex section.right-section article.card .description .links .left-links {
+  color: var(--sub-title);
+  gap: 0.8rem;
+}
+
+main.flex
+  section.right-section
+  article.card
+  .description
+  .links
+  .left-links
+  span:first-child:hover,
+main.flex
+  section.right-section
+  article.card
+  .description
+  .links
+  .left-links
+  span:last-child:hover {
+  font-size: 1.4rem;
+  color: var(--icon-hover);
+}
+main.flex section.right-section article.card .description .links .right-links {
+  color: var(--blue-color);
+  gap: 0.3rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+main.flex
+  section.right-section
+  article.card
+  .description
+  .links
+  .right-links:hover {
+  font-size: 1.1rem;
+}
+main.flex
+  section.right-section
+  article.card
+  .description
+  .links
+  .right-links
+  span:last-child {
+  align-self: flex-end;
+}
+
+/*=========================================
+        4-responsive(media query)
+===========================================
+*/
+
+@media (max-width: 600px) {
+  main.flex {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  main.flex section.left-section.flex {
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  main.flex section.left-section.flex button {
+    width: 7rem;
+  }
+}

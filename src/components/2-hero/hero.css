@@ -1,0 +1,114 @@
+/*=========================================
+        Table of Content
+===========================================
+*/
+
+/*
+        1-hero section
+        2-left side 
+            2.1- avatar image
+            2.2- title
+            2.3- description
+            2.4- social media icons
+        3-right side (animation)
+        4-responsive(media query)
+*/
+
+/*=========================================
+        1-hero section
+===========================================
+*/
+section.hero-section {
+  margin-top: 2rem;
+}
+
+/*=========================================
+        1-left side
+===========================================
+*/
+section.hero-section .left-section {
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+/*=========================================
+        2.1-avatar image
+===========================================
+*/
+section.hero-section .left-section .avatar {
+  padding: 1rem 0;
+  gap: 0.7rem;
+}
+
+section.hero-section .left-section .avatar img {
+  width: 130px;
+  border-radius: 50%;
+  border: 1px solid orange;
+  padding: 0.5rem;
+}
+section.hero-section .left-section .avatar .verified {
+  color: var(--blue-color);
+  align-self: flex-end;
+}
+
+/*=========================================
+        2.2-title
+===========================================
+*/
+section.hero-section .left-section .title {
+  font-size: 2.5rem;
+  line-height: 4rem;
+  color: var(--title);
+}
+
+/*=========================================
+        2.3-description
+===========================================
+*/
+
+section.hero-section .left-section .description {
+  margin: 1.5rem 0;
+  font-size: 1rem;
+  line-height: 2rem;
+  color: var(--sub-title);
+}
+/*=========================================
+        2.4-social media icons
+===========================================
+*/
+
+section.hero-section .left-section .all-icons {
+  font-size: 1.3rem;
+  gap: 1rem;
+  color: var(--sub-title);
+}
+section.hero-section .left-section .all-icons .icon:hover {
+  font-size: 1.4rem;
+  transition: 0.3s;
+  cursor: pointer;
+  color: var(--icon-hover);
+}
+
+/*=========================================
+        3-right side (animation)
+===========================================
+*/
+
+/*=========================================
+        4-responsive(media query)
+===========================================
+*/
+@media (max-width: 1000px) {
+  section.hero-section .right-section {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  section.hero-section .left-section .avatar,
+  section.hero-section .left-section .all-icons {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

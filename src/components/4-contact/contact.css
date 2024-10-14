@@ -1,0 +1,162 @@
+/*=========================================
+        Table of Content
+===========================================
+*/
+
+/*
+        1-contact section
+        2-head of the section
+        3-body of the section
+            3.1 form
+            3.2 animaion
+        4-responsive(media query)
+        
+*/
+
+/*=========================================
+        1-contact section
+===========================================
+*/
+section.contact-section {
+  justify-content: left;
+}
+
+/*=========================================
+        2-head of the section
+===========================================
+*/
+section.contact-section .head {
+  width: 100%;
+}
+
+section.contact-section .head .header.flex {
+  gap: 13px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+section.contact-section .head .header.flex div:first-child {
+  font-size: 1.4rem;
+  color: var(--sub-title);
+}
+section.contact-section .head .header.flex {
+  color: var(--title);
+}
+section.contact-section .head p:last-child {
+  color: var(--sub-title);
+  font-size: 0.8rem;
+  line-height: 1.6rem;
+}
+
+/*=========================================
+        3-body of the section
+===========================================
+*/
+section.contact-section .body {
+  width: 100%;
+  gap: 3rem;
+  padding: 2rem 0;
+  flex-direction: column;
+  align-items: flex-start;
+}
+/*=========================================
+        3.1-form
+===========================================
+*/
+
+section.contact-section .body form {
+  flex-direction: column;
+  align-items: flex-start;
+}
+section.contact-section .body form div:nth-child(2) {
+  margin: 1rem 0;
+}
+
+section.contact-section .body form label {
+  color: var(--sub-title);
+  text-transform: capitalize;
+}
+section.contact-section .body form #email,
+section.contact-section .body form #message {
+  color: var(--title);
+  background-color: var(--secendary);
+  border: 1px solid var(--sub-title);
+  border-radius: 7px;
+  margin-left: 1rem;
+  padding: 0.7rem;
+  width: 25rem;
+}
+section.contact-section .body form #message {
+  resize: vertical;
+  max-height: 400px;
+  min-height: 100px;
+}
+
+section.contact-section .body form button {
+  opacity: 0.8;
+  border: 1px solid var(--sub-title);
+  padding: 0.5rem 0;
+  width: 8rem;
+  text-align: center;
+  transition: 0.3s;
+  border-radius: 5px;
+  margin-top: 2rem;
+  background-color: rgba(36, 37, 46, 1);
+}
+section.contact-section .body form button:hover {
+  opacity: 1;
+  border: 1px solid var(--blue-color);
+}
+
+/*=========================================
+        3-animation
+===========================================
+*/
+
+section.contact-section .animation {
+  margin: 0 auto;
+  max-width: 400px;
+  translate: -100px 0;
+}
+
+/*=========================================
+        4-responsive(media query)
+===========================================
+*/
+
+@media (max-width: 600px) {
+  section.contact-section .body form {
+    width: 85%;
+    margin: 0 auto;
+  }
+  section.contact-section .body form div.flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+    width: 100%;
+  }
+  section.contact-section .body form #email,
+  section.contact-section .body form #message {
+    width: 90%;
+    margin-left: 0;
+  }
+  section.contact-section .body form button {
+    align-self: center;
+    width: 50%;
+  }
+}
+
+@media (max-width: 800px) {
+  section.contact-section .body .animation {
+    display: none;
+  }
+}
+@media (max-width: 1100px) {
+  section.contact-section .animation {
+    display: none;
+  }
+}
+@media (max-width: 1500px) {
+  section.contact-section .animation {
+    translate: 0;
+  }
+}

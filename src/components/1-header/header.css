@@ -1,0 +1,161 @@
+/*=========================================
+        Table of Content
+===========================================
+*/
+
+/*
+        1-header
+        2-header buttons
+        3-navbar and modal
+        4-responsive (mediaquery)
+        5-animation (keyframe)
+
+
+
+*/
+
+/*=========================================
+        1-header
+===========================================
+*/
+header{
+    justify-content: space-between;
+    padding: 0 2rem;
+    margin-top: 1.2rem;
+}
+header nav{
+    background-color: var(--divider);
+    padding: 0.77rem 1.6rem;
+    border-radius: 55px;
+    box-shadow: 2px 2px 16px rgba(31, 24, 24, 0.322);
+}
+
+/*=========================================
+        2-header buttons
+===========================================
+*/
+header button{
+    font-size: 1.2rem;
+}
+
+header button.menu{
+    display: none;
+}
+
+header .icon-th-menu-outline,
+header .icon-moon-fill,
+header .icon-sun{
+    padding: 0.6rem;
+    background-color: var(--divider);
+    border-radius: 50%;
+    box-sizing: border-box;
+    color: var(--sub-title);
+    border: 1px solid rgba(227, 238, 68, 0.189); 
+    transition: 0.2s;
+}
+
+header .icon-th-menu-outline:hover,
+header .icon-moon-fill:hover,
+header .icon-sun:hover{
+    border: 1px solid salmon;
+    color: var(--title);
+}
+header .icon-sun:hover{
+    color: orange;
+}
+
+/*=========================================
+        3-navbar and modal
+===========================================
+*/
+header ul.flex{
+    gap: 16px;
+    justify-content: space-around;
+}
+
+header ul li a{
+    color: var(--title);
+    opacity: 0.9;
+    font-size: 0.88rem;
+    font-weight: 500;
+    
+}
+header ul li a:hover{
+    color: var(--blue-color);
+    opacity: 1;
+    font-size: 0.9rem;
+    
+}
+
+header div.fixed{
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    background-color: rgba(17, 17, 41, 0.768);
+    backdrop-filter: blur(3px);
+}
+
+
+header div.fixed ul.modal{
+    animation-name:show;
+    animation-duration:0.7s;
+    width: 75%;
+    margin: 2rem auto;
+    border-radius: 1rem;
+    background-color: var(--secendary);
+    padding: 1rem 2rem;
+}
+
+header div.fixed ul.modal li:first-child{
+    margin-bottom: -0.5rem;
+    text-align: right;
+}
+header div.fixed ul.modal li:first-child button.icon-cross{
+    color:var(--sub-title);
+    transition: 0.3s;
+
+}
+header div.fixed ul.modal li:first-child button.icon-cross:hover{
+    color: red;
+    rotate: 180deg;
+    font-size: 1.1rem;
+    padding-top: 0.2rem;
+
+}
+
+header div.fixed ul.modal li:not(:first-child){
+    padding-top: 0.5rem;
+    padding-bottom: 0.77rem;
+    
+}
+header div.fixed ul.modal li:not(:last-child,:first-child){
+    border-bottom: 1px solid var(--border);
+
+}
+header div.fixed ul.modal li a{
+    font-size: 1rem;
+}
+
+/*=========================================
+        4-responsive (mediaquery)
+===========================================
+*/
+@media (max-width:700px) {
+    header nav{
+        display: none;
+    }
+    header button.menu{
+        display: block;
+    }
+}
+
+/*=========================================
+        5-animation (keyframe)
+===========================================
+*/
+@keyframes show {
+    0%   {scale: 0;}
+    50%  {scale: 1.15;}
+    100% {scale: 1;}
+    
+}
