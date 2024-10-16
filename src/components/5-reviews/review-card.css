@@ -1,0 +1,22 @@
+.review-card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.5em;
+}
+
+.stars {
+  color: #f5c518; /* Gold color for stars */
+  margin: 5px 0;
+}
+
+.review-card p {
+  font-size: 1.1em;
+  color: #555;
+}

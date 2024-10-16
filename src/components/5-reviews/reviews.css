@@ -1,0 +1,45 @@
+/*=========================================
+        Table of Content
+===========================================
+*/
+
+/*
+        1-review section
+        2-review card
+        
+        
+*/
+
+/*=========================================
+        1-review section
+===========================================
+*/
+/*=========================================
+        2-review section
+===========================================
+*/
+.reviews .review {
+  flex-direction: column;
+  border: 1px solid rgba(68, 187, 241, 0.548);
+  border-radius: 8px;
+  align-items: flex-start;
+  padding: 2rem;
+  gap: 1rem;
+  width: 80%;
+  margin: 2rem auto;
+  transition: 0.5s;
+}
+.reviews .review:hover {
+  scale: 1.01;
+  border: 1px solid var(--blue-color);
+}
+
+.reviews .review .avatar {
+  gap: 1rem;
+}
+.reviews .review .avatar div:first-child {
+  font-size: 3rem;
+}
+.reviews .review .avatar h3 {
+  font-size: 3rem;
+}
