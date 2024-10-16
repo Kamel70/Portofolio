@@ -1,87 +1,85 @@
-
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-:root,.dark{
-  --primary:#000;
-  --secendary:hsl(240,5.88%,10%);
-  --border:hsl(240,2.78%,14.12%);
-  --divider:hsl(240,6.02%,16.27%);
-  --title:hsl(240,4.76%,95.88%);
-  --sub-title:hsl(240,3.06%,44.9%);
-  --blue-color:hsl(204.33,100%,49.8%);
-  --icon-hover:#d4d4d8;
-  --nav-shadow:rgba(31, 24, 24, 0.322);
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+:root,
+.dark {
+  --primary: #000;
+  --secendary: hsl(240, 5.88%, 10%);
+  --border: hsl(240, 2.78%, 14.12%);
+  --divider: hsl(240, 6.02%, 16.27%);
+  --title: hsl(240, 4.76%, 95.88%);
+  --sub-title: hsl(240, 3.06%, 44.9%);
+  --blue-color: hsl(204.33, 100%, 49.8%);
+  --icon-hover: #d4d4d8;
+  --nav-shadow: rgba(31, 24, 24, 0.322);
 }
-.light{
-  --primary:hsl(0,0%,98.04%);
-  --secendary:#fff;
-  --title:hsl(240,3.7%,15.88%);
-  --divider:white;
-  --border:rgb(240,240,240);
-  --nav-shadow:rgba(243, 243, 239, 0.685);
-  
+.light {
+  --primary: hsl(0, 0%, 98.04%);
+  --secendary: #fff;
+  --title: hsl(240, 3.7%, 15.88%);
+  --divider: white;
+  --border: rgb(240, 240, 240);
+  --nav-shadow: rgba(243, 243, 239, 0.685);
 }
 
-html{
+html {
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.1px;
   scroll-behavior: smooth;
 }
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body{
+body {
   background-color: var(--primary);
   color: white;
 }
 
-.container{
+.container {
   background-color: var(--secendary);
-  
+
   border: 2px solid var(--border);
   width: 80%;
   margin: 0 auto;
   padding: 0 3rem;
 }
 
-.divider{
+.divider {
   border-bottom: 2px solid var(--divider);
-  margin:3rem -3rem ;
+  margin: 3rem -3rem;
 }
 
-li{
+li {
   list-style-type: none;
 }
 
-a{
+a {
   text-decoration: none;
   color: initial;
   transition: 0.2s;
 }
 
-.flex{
+.flex {
   display: flex;
   align-items: center;
 }
 
-.border{
+.border {
   border: 2px solid red;
 }
 
-button{
+button {
   all: unset;
 }
 
-button:hover{
+button:hover {
   cursor: pointer;
 }
 
-button:active{
+button:active {
   scale: 0.9;
 }
-button:disabled{
+button:disabled {
   cursor: not-allowed;
   opacity: 0.4;
 }
@@ -108,7 +106,7 @@ button:disabled{
   background: #555;
 }
 
-div.container .top{
+div.container .top {
   position: fixed;
   right: 3%;
   bottom: 2rem;
@@ -119,33 +117,44 @@ div.container .top{
   text-align: center;
   font-size: 2rem;
   border-radius: 50%;
-  border: 1px solid rgb(255, 255, 255,0.3);
+  border: 1px solid rgb(255, 255, 255, 0.3);
 }
-div.container .top:hover{
+div.container .top:hover {
   background-color: rgba(25, 118, 210);
 }
-@media (max-width:1000px) {
-  .container{
+.error {
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 100px;
+}
+.details {
+  background-color: var(--secendary);
+  border-radius: 5px;
+  flex-direction: column;
+  gap: 10rem;
+}
+@media (max-width: 1000px) {
+  .container {
     width: 90%;
     padding: 0 1.7rem;
   }
-  .divider{
-    margin:3rem -1.7rem ;
+  .divider {
+    margin: 3rem -1.7rem;
   }
 }
-@media (max-width:600px) {
-  .container{
+@media (max-width: 600px) {
+  .container {
     width: 98%;
     padding: 0 1.7rem;
   }
-  .divider{
-    margin:3rem -1.7rem ;
+  .divider {
+    margin: 3rem -1.7rem;
   }
-  div.container .top{
+  div.container .top {
     width: 2rem;
     height: 2rem;
     opacity: 0.6;
     font-size: 1.4rem;
   }
-
 }

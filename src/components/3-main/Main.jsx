@@ -65,6 +65,7 @@ export default function Main() {
                       <span className="icon-link"></span>
                       <span className="icon-github"></span>
                     </div>
+
                     <div className="right-links flex">
                       <p>more</p>
                       <span className="icon-arrow-right2"></span>
