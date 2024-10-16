@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { projects } from "../../myProjects.js";
+import { projects } from "../../data.js";
 import "./main.css";
 import { motion, AnimatePresence } from "framer-motion";
 
