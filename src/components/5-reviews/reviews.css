@@ -6,7 +6,7 @@
 /*
         1-review section
         2-review card
-        
+        3-responsive design (media query)
         
 */
 
@@ -15,7 +15,7 @@
 ===========================================
 */
 /*=========================================
-        2-review section
+        2-review card
 ===========================================
 */
 .reviews .review {
@@ -61,4 +61,18 @@
   color: var(--blue-color);
   font-size: 2rem;
   gap: 2rem;
+}
+
+@media (max-width: 400px) {
+  .reviews .review {
+    align-items: center;
+    min-width: 90px;
+  }
+  .reviews .review .avatar {
+    flex-direction: column;
+  }
+  .reviews .review .avatar div:first-child,
+  .reviews .review .avatar h3 {
+    font-size: 2rem;
+  }
 }

@@ -1,11 +1,10 @@
 import "./reviews.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, EffectCoverflow } from "swiper/modules";
-
+import { reviews } from "../../data";
 import ReviewCard from "./ReviewCard";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
-// import "swiper/css/navigation";
 
 export default function Reviews() {
   return (
@@ -15,14 +14,13 @@ export default function Reviews() {
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
-        loop={true}
-        slidesPerView={2}
+        slidesPerView={1}
         coverflowEffect={{
           rotate: 0,
-          stretch: -12,
-          depth: 350,
-          modifier: 2.5,
-          slideShadows: true,
+          stretch: -100,
+          depth: 250,
+          modifier: 10,
+          slideShadows: false,
         }}
         navigation={{
           nextEl: ".swiper-button-next",
@@ -30,28 +28,21 @@ export default function Reviews() {
         }}
         modules={[EffectCoverflow, Navigation]}
       >
-        <SwiperSlide>
-          <ReviewCard name="Camel" stars={5} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ReviewCard name="Jane Doe" stars={4} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ReviewCard name="Jane " stars={4.5} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ReviewCard name="Jane Doe" stars={3} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ReviewCard name="Jane " stars={5} />
-        </SwiperSlide>
+        {reviews.map((item) => {
+          return (
+            <SwiperSlide key={item.date}>
+              <ReviewCard
+                name={item.name}
+                stars={item.stars}
+                date={item.date}
+              />
+            </SwiperSlide>
+          );
+        })}
         <div className="slider-controler">
-          <div className="swiper-button-prev">
-            <button className="icon-arrow-circle-left"></button>
-          </div>
-          <div className="swiper-button-next">
-            <button className="icon-arrow-circle-right"></button>
-          </div>
+          <button className="swiper-button-prev icon-arrow-circle-left"></button>
+
+          <button className="swiper-button-next icon-arrow-circle-right"></button>
         </div>
       </Swiper>
     </section>

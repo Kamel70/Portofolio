@@ -53,3 +53,11 @@ export let projects = [
     React.js is an open-source JavaScript library, crafted with precision by Facebook, that aims to simplify the intricate process of building interactive user interfaces. Imagine a user interface built with React as a collection of components, each responsible for outputting a small, reusable piece of HTML code.`,
     },
   ];
+
+  export let reviews =[
+    {name:'Ahmed', stars:5,date:'Sept 5, 2024'},
+    {name:'John', stars:5,date:'May 7, 2024'},
+    {name:'Asmaa', stars:4,date:'March 10, 2024'},
+    {name:'Mohammed', stars:5,date:'Jan 25, 2024'},
+    {name:'Somaya', stars:4,date:'Nov 20, 2023'},
+  ]
