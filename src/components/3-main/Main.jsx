@@ -14,7 +14,7 @@ export default function Main() {
       : setArr(newArr.filter((project) => project.category === category));
   }
   return (
-    <main className="flex ">
+    <main id="projects" className="flex">
       <section className="left-section  flex">
         <button
           className={active === 1 ? "active" : undefined}

@@ -1,50 +1,106 @@
-.card {
-  border: 1px solid var(--blue-color);
-  border-radius: 8px;
-  padding: 16px;
-  max-width: 400px;
-  margin: 20px auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 2s ease;
+/*=========================================
+        Table of Content
+===========================================
+*/
+
+/*
+        1-articles section
+        2-article card
+        3-resposive (media query)
+*/
+
+/*=========================================
+        1-articles section
+===========================================
+*/
+
+section.articles {
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
-.card:hover {
+/*=========================================
+        1-articles card
+===========================================
+*/
+section.articles .card {
+  border: 1px solid var(--divider);
+  border-radius: 8px;
+  width: 40%;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.4s ease;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+section.articles .card:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.title {
+section.articles .card .title {
   font-size: 1.5em;
   margin-bottom: 8px;
+  color: white;
+  background-color: var(--blue-color);
+  border-radius: 5px 5px 0 0;
+  padding: 16px;
+  width: 100%;
 }
 
-.date {
+section.articles .card .date {
   font-size: 0.9em;
-  color: #888;
-  margin-bottom: 16px;
+  color: var(--sub-title);
+  padding: 16px;
 }
 
-.content {
-  max-height: 60px; /* limit the visible content height */
+section.articles .card .content {
+  max-height: 140px; /* limit the visible content height */
   overflow: hidden;
   transition: max-height 0.4s ease;
+  color: var(--sub-title);
+  line-height: 1.5rem;
+  padding: 0 16px;
 }
 
-.content.expanded {
+section.articles .card .content.expanded {
   max-height: 500px; /* allow the full content to be shown when expanded */
+  transition: 2s;
 }
 
-.see-more {
+section.articles .card .see-more {
   display: block;
-  margin-top: 8px;
+  margin: 8px 0;
   background-color: transparent;
   border: none;
-  color: #007bff;
+  color: var(--blue-color);
   font-weight: bold;
   cursor: pointer;
-  padding: 0;
+  padding: 0 16px;
   transition: color 0.3s;
 }
 
-.see-more:hover {
+section.articles .card .see-more:hover {
   color: #0056b3;
+}
+
+/*=========================================
+        3-resposive (media query)
+===========================================
+*/
+
+@media (max-width: 1300px) {
+  section.articles .card {
+    width: 80%;
+  }
+}
+@media (max-width: 500px) {
+  section.articles .card {
+    width: 95%;
+    align-items: center;
+  }
+  section.articles .card .title {
+    text-align: center;
+  }
 }

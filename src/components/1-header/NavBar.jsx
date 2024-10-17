@@ -6,13 +6,13 @@ export default function NavBar({ ulClassName, children }) {
         <a href="#about">About</a>
       </li>
       <li>
-        <a href="#articles">Articles</a>
-      </li>
-      <li>
         <a href="#projects">Projects</a>
       </li>
       <li>
-        <a href="#speaking">Speaking</a>
+        <a href="#articles">Articles</a>
+      </li>
+      <li>
+        <a href="#reviews">Reviews</a>
       </li>
       <li>
         <a href="#contact">Contact</a>

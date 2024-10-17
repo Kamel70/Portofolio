@@ -15,7 +15,7 @@
   --primary: hsl(0, 0%, 98.04%);
   --secendary: #fff;
   --title: hsl(240, 3.7%, 15.88%);
-  --divider: white;
+  --divider: rgb(240, 240, 240);
   --border: rgb(240, 240, 240);
   --nav-shadow: rgba(243, 243, 239, 0.685);
 }

@@ -43,3 +43,7 @@
 .reviews .review .avatar h3 {
   font-size: 3rem;
 }
+
+Swipper {
+  flex-direction: column;
+}

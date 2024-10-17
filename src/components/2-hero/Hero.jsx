@@ -3,7 +3,7 @@ import Lottie from "lottie-react";
 import codingAnimation from "../../animation/coding-animation.json";
 export default function Hero() {
   return (
-    <section className="flex hero-section">
+    <section id="about" className="flex hero-section">
       <div className="left-section flex">
         <div className="avatar flex">
           <img src="./vite.svg" alt="photo of dev kamel samy" />

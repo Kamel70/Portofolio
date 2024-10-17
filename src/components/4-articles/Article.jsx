@@ -7,7 +7,7 @@ export default function Article({ title, date, content }) {
     setIsExpanded(!isExpanded);
   };
   return (
-    <div className="card">
+    <div id="articles" className="card flex">
       <h2 className="title">{title}</h2>
       <p className="date">{date}</p>
       <p className={`content ${isExpanded ? "expanded" : ""}`}>{content}</p>
