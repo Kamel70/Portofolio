@@ -37,13 +37,28 @@
 .reviews .review .avatar {
   gap: 1rem;
 }
-.reviews .review .avatar div:first-child {
-  font-size: 3rem;
-}
+.reviews .review .avatar div:first-child,
 .reviews .review .avatar h3 {
   font-size: 3rem;
 }
 
-Swipper {
-  flex-direction: column;
+.reviews .review .avatar .date,
+.reviews .review .avatar .opinion {
+  color: var(--sub-title);
+}
+
+.swiper {
+  width: 100%;
+}
+
+.slider-controler {
+  position: relative;
+  bottom: 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--blue-color);
+  font-size: 2rem;
+  gap: 2rem;
 }
