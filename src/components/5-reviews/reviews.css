@@ -26,12 +26,20 @@
   padding: 2rem;
   gap: 1rem;
   width: 80%;
-  margin: 2rem auto;
-  transition: 0.5s;
+  margin: 7rem auto;
+  /* background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.5)
+  ); */
+  background-color: var(--card-background);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.5s ease;
 }
 .reviews .review:hover {
-  scale: 1.01;
+  scale: 1.01rem;
   border: 1px solid var(--blue-color);
+  /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); */
 }
 
 .reviews .review .avatar {
@@ -40,15 +48,15 @@
 .reviews .review .avatar div:first-child,
 .reviews .review .avatar h3 {
   font-size: 3rem;
+  color: var(--title);
+}
+.reviews .review .stars span {
+  color: var(--title);
 }
 
-.reviews .review .avatar .date,
-.reviews .review .avatar .opinion {
+.reviews .review .date,
+.reviews .review .opinion {
   color: var(--sub-title);
-}
-
-.swiper {
-  width: 100%;
 }
 
 .slider-controler {
@@ -62,6 +70,11 @@
   font-size: 2rem;
   gap: 2rem;
 }
+
+/*=========================================
+        3-responsive design (media query)
+===========================================
+*/
 
 @media (max-width: 400px) {
   .reviews .review {

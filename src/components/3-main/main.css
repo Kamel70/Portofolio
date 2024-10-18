@@ -69,8 +69,8 @@ main.flex section.right-section article.card {
     rgba(255, 255, 255, 0.05),
     rgba(255, 255, 255, 0.05)
   ); */
-  box-shadow: 1px 1px 8px black;
-  background-color: rgb(36, 36, 39);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.301);
+  background-color: var(--card-background);
 }
 main.flex section.right-section article.card:hover {
   /* border: 1px solid var(--blue-color); */
@@ -78,6 +78,7 @@ main.flex section.right-section article.card:hover {
   opacity: 1;
   rotate: 1deg;
   cursor: pointer;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.701);
 }
 main.flex section.right-section article.card img {
   width: 266px;
@@ -89,7 +90,7 @@ main.flex section.right-section article.card .description {
 }
 
 main.flex section.right-section article.card .description h2.title {
-  color: white;
+  color: var(--title);
   margin-bottom: 0.5rem;
 }
 main.flex section.right-section article.card .description p.sub-title {
