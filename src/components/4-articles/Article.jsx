@@ -14,7 +14,6 @@ export default function Article({ title, date, content }) {
       <button className="see-more" onClick={toggleContent}>
         {isExpanded ? "See Less" : "See More"}
       </button>
-      <div className="icon-circle-left"></div>
     </div>
   );
 }

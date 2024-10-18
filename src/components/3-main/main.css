@@ -30,7 +30,7 @@ main.flex section.left-section.flex button {
   padding: 1rem 0.7rem;
   background-color: rgba(36, 37, 46, 1);
   width: 11rem;
-  /* height: 2rem; */
+  height: 2rem;
   text-align: center;
   border-radius: 6px;
   text-transform: capitalize;
@@ -45,14 +45,14 @@ main.flex section.left-section.flex button.active {
   border: 1px solid var(--blue-color);
   letter-spacing: 1px;
   font-weight: bold;
-  padding: 0.7rem;
+  /* padding: 0.7rem; */
 }
 
 /*=========================================
         3-right side
 ===========================================
 */
-main.flex section.right-section {
+main.flex div.right-section {
   flex-grow: 1;
   row-gap: 30px;
   column-gap: 15px;
@@ -60,9 +60,9 @@ main.flex section.right-section {
   transition: 0.4s;
   justify-content: center;
 }
-main.flex section.right-section article.card {
+main.flex div.right-section div.card {
   border: 1px solid rgba(68, 187, 241, 0.548);
-  opacity: 0.8;
+  opacity: 0.9;
   transition: 0.3s;
   border-radius: 5px;
   /* background-image: linear-gradient(
@@ -72,7 +72,7 @@ main.flex section.right-section article.card {
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.301);
   background-color: var(--card-background);
 }
-main.flex section.right-section article.card:hover {
+main.flex div.right-section div.card:hover {
   /* border: 1px solid var(--blue-color); */
   scale: 1.05;
   opacity: 1;
@@ -80,43 +80,43 @@ main.flex section.right-section article.card:hover {
   cursor: pointer;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.701);
 }
-main.flex section.right-section article.card img {
+main.flex div.right-section div.card img {
   width: 266px;
   border-radius: 5px 5px 0 0;
 }
-main.flex section.right-section article.card .description {
+main.flex div.right-section div.card .description {
   width: 266px;
   padding: 0.8rem 0.6rem;
 }
 
-main.flex section.right-section article.card .description h2.title {
+main.flex div.right-section div.card .description h2.title {
   color: var(--title);
   margin-bottom: 0.5rem;
 }
-main.flex section.right-section article.card .description p.sub-title {
+main.flex div.right-section div.card .description p.sub-title {
   color: var(--sub-title);
   font-size: 0.9rem;
   margin-bottom: 1rem;
 }
-main.flex section.right-section article.card .description .links {
+main.flex div.right-section div.card .description .links {
   justify-content: space-between;
   font-size: 1.3rem;
 }
-main.flex section.right-section article.card .description .links .left-links {
+main.flex div.right-section div.card .description .links .left-links {
   color: var(--sub-title);
   gap: 0.8rem;
 }
 
 main.flex
-  section.right-section
-  article.card
+  div.right-section
+  div.card
   .description
   .links
   .left-links
   span:first-child:hover,
 main.flex
-  section.right-section
-  article.card
+  div.right-section
+  div.card
   .description
   .links
   .left-links
@@ -124,24 +124,19 @@ main.flex
   font-size: 1.4rem;
   color: var(--icon-hover);
 }
-main.flex section.right-section article.card .description .links .right-links {
+main.flex div.right-section div.card .description .links .right-links {
   color: var(--blue-color);
   gap: 0.3rem;
   cursor: pointer;
   font-size: 1rem;
   transition: 0.3s;
 }
-main.flex
-  section.right-section
-  article.card
-  .description
-  .links
-  .right-links:hover {
+main.flex div.right-section div.card .description .links .right-links:hover {
   font-size: 1.1rem;
 }
 main.flex
-  section.right-section
-  article.card
+  div.right-section
+  div.card
   .description
   .links
   .right-links

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { projects } from "../../data.js";
 import "./main.css";
 import { motion, AnimatePresence } from "framer-motion";
+import ProjectCard from "./ProjectCard.jsx";
 
 export default function Main() {
   const [active, setActive] = useState(1);
@@ -41,42 +42,19 @@ export default function Main() {
           Node & Express
         </button>
       </section>
-      <motion.section className="right-section flex">
+      <div className="right-section flex">
         <AnimatePresence>
           {arr.map((item) => {
             return (
-              <motion.article
-                layout
-                animate={{ opacity: 1 }}
-                initial={{ opacity: 0 }}
-                transition={{ damping: 8, type: "spring", stiffness: 30 }}
-                key={item.title}
-                className="card"
-              >
-                <img src={item.image} alt="" />
-                <div className="description">
-                  <h2 className="title">{item.title}</h2>
-                  <p className="sub-title">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Qui minima earum ab culpa. Sed error repudiandae fugiat
-                  </p>
-                  <div className="links flex">
-                    <div className="left-links flex">
-                      <span className="icon-link"></span>
-                      <span className="icon-github"></span>
-                    </div>
-
-                    <div className="right-links flex">
-                      <p>more</p>
-                      <span className="icon-arrow-right2"></span>
-                    </div>
-                  </div>
-                </div>
-              </motion.article>
+              <ProjectCard
+                key={item.id}
+                image={item.image}
+                title={item.title}
+              />
             );
           })}
         </AnimatePresence>
-      </motion.section>
+      </div>
     </main>
   );
 }
